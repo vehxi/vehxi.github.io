@@ -18,6 +18,11 @@ html.dark-theme {
     --shadow-color: rgba(255, 255, 255, 0.5);
 }
 
+html.dark-theme h2 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -40,7 +45,7 @@ body {
     background-color: var(--color-bg);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 3px 15px var(--shadow-color);
+    box-shadow: 0 0 5px var(--shadow-color);
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -65,11 +70,11 @@ h1 {
     object-fit: cover;
     width: 200px;
     height: 200px;
-    border-radius: 18%;
+    border-radius: 6%;
     border: 2px solid var(--border-color);
     position: relative;
     z-index: 1;
-    box-shadow: 0 5px 25px var(--shadow-color);
+    box-shadow: 0 0 25px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
@@ -126,7 +131,6 @@ a:hover {
     height: 0;
 }
 
-/* Создаем "слайдер" */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -151,7 +155,6 @@ a:hover {
     border-radius: 50%;
 }
 
-/* Состояние включено */
 input:checked + .slider {
     background-color: rgb(138, 218, 111);
 }
