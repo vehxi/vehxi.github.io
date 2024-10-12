@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+
+
+.profile-pic {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.pfpPic {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 18%;
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.pfpPic:hover {
+    transform: scale(1.1);
+}
+
+.about-me, .hobbies, .links {
+    margin: 20px 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+p, ul {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "• "; /* Добавляет маркер к каждому элементу списка */
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
