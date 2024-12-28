@@ -7,16 +7,22 @@ document.addEventListener("DOMContentLoaded", function() {
       const snowflake = document.createElement('div');
       snowflake.classList.add('snowflake');
       snowflake.style.left = `${Math.random() * 100}vw`;
-      snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random duration between 5s and 10s
-      snowflake.style.animationDelay = `${Math.random() * 5}s`; // Random delay
+      snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Случайная продолжительность от 5 до 10 секунд
+      snowflake.style.animationDelay = `${Math.random() * 5}s`; // Случайная задержка
       snowflakesContainer.appendChild(snowflake);
 
-      // Remove snowflake after animation to avoid excess elements in the DOM
+      // Удаляем снежинку после окончания анимации, чтобы избежать лишних элементов в DOM
       snowflake.addEventListener('animationend', function() {
           snowflake.remove();
       });
   }
 
-  // Generate snowflakes continuously
-  setInterval(createSnowflake, 100);
+  // Определяем мобильное устройство
+  const isMobile = window.innerWidth <= 768;
+
+  // Изменяем частоту создания снежинок для мобильных устройств
+  const snowflakeInterval = isMobile ? 800 : 100; // На мобильных устройствах создаем снежинки реже
+
+  // Генерация снежинок через заданный интервал
+  setInterval(createSnowflake, snowflakeInterval);
 });
