@@ -22,7 +22,6 @@ html.dark-theme h2 {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -164,23 +163,61 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
     h1 {
         font-size: 2.5em;
     }
+
+    .pfpPic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-pic {
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .switch {
+        top: 5px;
+        right: 5px;
+    }
 }
 
-.sf-snow-flake {
+/* Snowfall animation */
+.snowfall {
     position: fixed;
-    top: -20px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: white;
     width: 10px;
     height: 10px;
-    background-color: white;
     border-radius: 50%;
-    animation: fall linear;
+    opacity: 0.8;
+    animation: snowfall 10s linear infinite;
 }
 
-@keyframes fall {
+@keyframes snowfall {
     to {
         transform: translateY(100vh);
+        opacity: 0;
     }
 }
