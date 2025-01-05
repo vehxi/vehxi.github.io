@@ -207,7 +207,7 @@ input:checked + .slider:before {
 .snowflake {
     position: absolute;
     top: -10px;
-    background-color: white;
+    background-color: rgb(164, 172, 175);
     width: 10px;
     height: 10px;
     border-radius: 50%;
