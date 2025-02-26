@@ -81,6 +81,11 @@ h1 {
     transform: scale(1.1);
 }
 
+.projects a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .about-me, .hobbies, .links, .favorite-books, .goals-ambitions, .education, .projects, .professional-skills {
     margin: 20px 0;
 }
