@@ -1,0 +1,56 @@
+body {
+  background: #000;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  margin: 0;
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.ascii-box {
+  border: 1px solid #0f0;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .ascii-box {
+    padding: 5px;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
