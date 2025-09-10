@@ -12,7 +12,7 @@ This is my digital drift space — a personal site hosted on GitHub Pages. Built
 ## [CONNECT]
 - [Twitter: @v3hx1](https://twitter.com/v3hx1)  
 - [Site: vehxi.github.io](https://vehxi.github.io)  
-- [Email: tarakanov.alnk@gmail.com](mailto:tarakanov.alnk@gmail.com)  
+- [Email: vehxi.dev@gmail.com](mailto:vehxi.dev@gmail.com)  
 
 ## [RUN]
 1. Clone the repo:  
