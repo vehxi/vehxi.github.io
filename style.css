@@ -1,58 +1,167 @@
-body {
-  background: #000;
-  color: #0f0;
-  font-family: "Courier New", monospace;
+/* --- Глобальные настройки и переменные --- */
+:root {
+  --bg-color: #1c2023; 
+  --card-bg-color: #151716; 
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-color-1: #00bfff; /* Deep Sky Blue */
+  --accent-color-2: #bb9af7; /* Soft Purple */
+  --border-color-hover: rgba(255, 255, 255, 0.3);
+}
+
+* {
   margin: 0;
-  padding: 0; 
-  line-height: 1.5;
-  font-size: 14px;
-  height: 100vh; 
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-}
-
-.ascii-box {
-  border: 1px solid #0f0;
-  padding: 10px;
-  width: 100%;
-  max-width: 600px;
+  padding: 0;
   box-sizing: border-box;
-  overflow-x: auto;
 }
 
-.blink {
-  animation: blink 1s infinite;
+body {
+  background-color: var(--bg-color);
+  /* Возвращаем текстуру "шума" */
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 25px 25px;
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
-@keyframes blink {
-  50% {
+/* --- Контейнер для двух колонок --- */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* --- Левая колонка: Информация --- */
+.info-column {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  animation: neon-glow 3s ease-in-out infinite; 
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--accent-color-1);
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* --- Иконки соцсетей --- */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color-1);
+  transform: translateY(-3px);
+}
+
+/* --- Правая колонка: Видео --- */
+.video-column {
+  flex-shrink: 0;
+}
+
+/* --- Карточка с эффектом "Liquid Glass" --- */
+.video-card {
+  background: var(--card-bg-color);
+  border-radius: 40px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  transition: transform 0.4s ease-in-out, 
+              box-shadow 0.4s ease-in-out, 
+              border-color 0.4s ease-in-out;
+}
+
+.video-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: var(--border-color-hover);
+}
+
+.rounded-video {
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Адаптивность для мобильных устройств --- */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .rounded-video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+/* --- Анимация появления при загрузке --- */
+.fade-in-up {
     opacity: 0;
-  }
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-a {
-  color: #0ff;
-  text-decoration: none;
-  word-break: break-all;
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-a:hover {
-  text-decoration: underline;
+.fade-in-up:nth-child(2) {
+    transition-delay: 0.2s;
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
-    padding: 10px;
+@keyframes neon-glow {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(0, 191, 255, 0.4), 
+      0 0 10px rgba(0, 191, 255, 0.3);
   }
-
-  .ascii-box {
-    padding: 5px;
+  50% {
+    text-shadow: 
+      0 0 8px rgba(0, 191, 255, 0.7), 
+      0 0 20px rgba(0, 191, 255, 0.5),
+      0 0 30px rgba(187, 154, 247, 0.2);
   }
-
-  pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  100% {
+    text-shadow: 
+      0 0 5px rgba(0, 191, 255, 0.4), 
+      0 0 10px rgba(0, 191, 255, 0.3);
   }
 }

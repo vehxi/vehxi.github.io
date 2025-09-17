@@ -1,21 +1,14 @@
-# ⊹Vëhxï≻_ | vehxi.github.io
+# 🔥 Интерактивная визитка | VEHXI
 
-## [PROJECT_PROFILE]
-- **whoami**: Vëhxï  
-- **stack**: HTML | CSS | JS | AI | automation  
-- **location**: vehxi@localhost:1337  
-- **status**: ONLINE  
+[![Статус](https://img.shields.io/badge/status-live-brightgreen)](https://vehxi.github.io)
+[![Сделано с ❤️](https://img.shields.io/badge/Made%20with-Love-red)](https://github.com/vehxi/vehxi.github.io)
+[![Лицензия: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## [DESCRIPTION]
-This is my digital drift space — a personal site hosted on GitHub Pages. Built with raw HTML/CSS for a retro terminal vibe. Code less, think more.
+> Минималистичная и анимированная vCard с динамическим 3D-аватаром.
 
-## [CONNECT]
-- [Twitter: @v3hx1](https://twitter.com/v3hx1)  
-- [Site: vehxi.github.io](https://vehxi.github.io)  
-- [Email: vehxi.dev@gmail.com](mailto:vehxi.dev@gmail.com)  
+![](assets/img/poster.png)
 
-## [RUN]
-1. Clone the repo:  
-   ```bash
-   git clone git@github.com:vehxi/vehxi.github.io.git
+**Посмотреть вживую:** [**https://vehxi.github.io**](https://vehxi.github.io)
+
+---
 
