@@ -1,11 +1,10 @@
-/* --- Глобальные настройки и переменные --- */
 :root {
   --bg-color: #1c2023; 
   --card-bg-color: #151716; 
   --text-primary: #e0e0e0;
   --text-secondary: #a0a0a0;
-  --accent-color-1: #00bfff; /* Deep Sky Blue */
-  --accent-color-2: #bb9af7; /* Soft Purple */
+  --accent-color-1: #00bfff;
+  --accent-color-2: #bb9af7;
   --border-color-hover: rgba(255, 255, 255, 0.3);
 }
 
@@ -17,7 +16,6 @@
 
 body {
   background-color: var(--bg-color);
-  /* Возвращаем текстуру "шума" */
   background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
   background-size: 25px 25px;
   color: var(--text-primary);
@@ -29,7 +27,6 @@ body {
   padding: 2rem;
 }
 
-/* --- Контейнер для двух колонок --- */
 .container {
   display: flex;
   align-items: center;
@@ -39,7 +36,6 @@ body {
   width: 100%;
 }
 
-/* --- Левая колонка: Информация --- */
 .info-column {
   max-width: 450px;
   display: flex;
@@ -66,7 +62,6 @@ body {
   color: var(--text-secondary);
 }
 
-/* --- Иконки соцсетей --- */
 .social-links {
   display: flex;
   gap: 1.5rem;
@@ -83,12 +78,10 @@ body {
   transform: translateY(-3px);
 }
 
-/* --- Правая колонка: Видео --- */
 .video-column {
   flex-shrink: 0;
 }
 
-/* --- Карточка с эффектом "Liquid Glass" --- */
 .video-card {
   background: var(--card-bg-color);
   border-radius: 40px;
@@ -114,7 +107,6 @@ body {
   display: block;
 }
 
-/* --- Адаптивность для мобильных устройств --- */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -131,7 +123,6 @@ body {
   }
 }
 
-/* --- Анимация появления при загрузке --- */
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
