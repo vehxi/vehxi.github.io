@@ -18,7 +18,7 @@ body {
   background-color: var(--bg-color);
   background-image: radial-gradient(
     circle at 1px 1px,
-    rgba(255, 255, 255, 0.04) 1px,
+    rgba(255, 255, 255, 0.08) 1px,
     transparent 0
   );
   background-size: 25px 25px;
@@ -106,7 +106,7 @@ body {
 .rounded-video {
   width: 400px;
   height: 400px;
-  border-radius: 30px;
+  border-radius: 50px;
   object-fit: cover;
   display: block;
 }
