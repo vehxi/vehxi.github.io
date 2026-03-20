@@ -24,7 +24,7 @@ header {
 
 .name {
     font-family: 'Syne', sans-serif;
-    font-size: 65px;
+    font-size: 70px;
     font-weight: 800;
     line-height: 1;
     letter-spacing: -2px;
@@ -114,4 +114,53 @@ header {
 }
 .about p span {
     color: #e8e8e8
+}
+
+.skills {
+    margin-top: 60px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2px;
+}
+
+.skill-group {
+    background-color: #161616;
+    padding: 20px 22px;
+    border: 1px solid #1f1f1f;
+    transition: border-color .25s, background .25s;
+    cursor: default;
+}
+
+.skill-group:hover {
+    border-color: #c8ff57;
+    background-color: #1a1f10;
+}
+
+.skill-group h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #c8ff57;
+    margin-bottom: 10px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-list span {
+    font-size: 12px;
+    color: #888;
+    transition: color .2s;
+}
+
+.skill-group:hover .skill-list span {
+    color: #e8e8e8;
 }
