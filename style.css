@@ -248,6 +248,36 @@ main {
     line-height: 1.8;
 }
 
+.skill-group h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.stack-bar {
+    display: flex;
+    gap: 3px;
+    margin-top: 20px;
+}
+
+.stack-item {
+    height: 24px;
+    border-radius: 2px;
+    opacity: .7;
+    transition: opacity .2s, transform .2s;
+    cursor: default;
+    font-size: 10px;
+    color: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+}
+
 footer {
     margin-top: 80px;
     padding: 32px 0;
