@@ -10,3 +10,74 @@ body {
     color: #e8e8e8;
 }
 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.name {
+    font-family: 'Syne', sans-serif;
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #e8e8e8;
+}
+
+.name span {
+    color: #c8ff57;
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.9;
+}
+
+.header-contacts a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #1f1f1f;
+    transition: color .2s, border-color .2s;
+}
+
+.header-contacts a:hover {
+    color: #c8ff57;
+    border-color: #c8ff57;
+}
+
+.title-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 14px;
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.title-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #c8ff57;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
+}
