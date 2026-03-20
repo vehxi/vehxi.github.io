@@ -238,11 +238,7 @@ footer {
         align-items: flex-start;
         justify-content: flex-start;
     }
-       .name {
+    .name {
         font-size: 35px;
     }
-    .title-badge {
-        align-items: flex-start;
-    }
- 
  }
