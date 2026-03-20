@@ -5,21 +5,30 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: 'DM Mono', monospace;
     background-color: #0e0e0e;
     color: #e8e8e8;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     max-width: 900px;
     margin: 0 auto;
-    padding: 80px 40px 120px;
+    padding: 80px 40px 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 120px;
 }
 
 .name {
@@ -163,4 +172,56 @@ header {
 
 .skill-group:hover .skill-list span {
     color: #e8e8e8;
+}
+
+.experience {
+    margin-top: 60px;
+}
+
+.exp-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px 40px;
+    padding: 28px 0;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+}
+
+.exp-period {
+    font-size: 11px;
+    color: #555;
+    padding-top: 3px;
+}
+
+.exp-role {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #e8e8e8;
+    margin-bottom: 4px;
+}
+
+.exp-company {
+    font-size: 12px;
+    color: #c8ff57;
+    margin-bottom: 10px;
+}
+
+.exp-desc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.8;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 32px 0;
+    border-top: 1px solid #1f1f1f;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: #555;
 }
