@@ -317,10 +317,6 @@ footer {
         align-items: flex-start;
     }
 
-    .title-badge {
-        align-items: flex-start;
-    }
-
     .exp-item {
         grid-template-columns: 1fr;
         gap: 6px;
