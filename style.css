@@ -81,3 +81,37 @@ header {
     0%, 100% { opacity: 1; }
     50% { opacity: .3; }
 }
+
+.about {
+    margin-top: 64px;
+}
+
+.section-label {
+    display: flex;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    margin-bottom: 28px;
+    color: #555;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-label::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: #1f1f1f;
+}
+
+.about p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #aaa;
+    max-width: 600px;
+}
+.about p span {
+    color: #e8e8e8
+}
