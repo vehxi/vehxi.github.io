@@ -322,3 +322,8 @@ footer {
         gap: 6px;
     }
 }
+
+::selection {
+    background: #c8ff57;
+    color: #0e0e0e;
+}
